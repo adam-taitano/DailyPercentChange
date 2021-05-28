@@ -4,6 +4,10 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+// New Code to connect MongoDB
+var monk = require('monk');
+var db = monk('localhost:27017/nodetest1');
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
